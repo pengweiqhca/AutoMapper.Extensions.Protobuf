@@ -1,0 +1,23 @@
+﻿<Project>
+
+  <Import Project="..\Directory.Build.props" />
+
+  <PropertyGroup>
+    <AnalysisLevel>latest-Recommended</AnalysisLevel>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+
+    <DebugSymbols>True</DebugSymbols>
+    <!--<DebugType>embedded</DebugType>-->
+    <Deterministic>True</Deterministic>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Roslynator.Analyzers" Version="4.*" PrivateAssets="All" />
+    <PackageReference Include="Roslynator.Formatting.Analyzers" Version="4.*" PrivateAssets="All" />
+    <PackageReference Include="StyleCop.Analyzers" Version="*-*" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
